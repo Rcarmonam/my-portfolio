@@ -41,7 +41,7 @@ export default function Home() {
                 <FaGithub size={30} />
               </a>
               <a
-                href="/resume.pdf"
+                href="/Carmona_Ruben_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View my resume"
