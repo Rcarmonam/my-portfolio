@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import TypewriterEffect from '@/components/ui/TypewriterEffect'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { TbFileDownloadFilled } from 'react-icons/tb'
 
 export default function Home() {
   return (
@@ -14,23 +16,53 @@ export default function Home() {
               <span className="text-zinc-600">Software Engineer</span>
             </h1>
             <TypewriterEffect />
-            <p className="max-w-md text-base leading-8 text-zinc-600 dark:text-zinc-400 ">
-              Building fast, accessible web experiences. 2 years shipping
-              production-level features with React, TypeScript, and Node.js.
+            <p className="max-w-md text-base leading-8 text-zinc-400">
+              Building fast, accessible, and user-focused web experiences.
+              Software Engineer with 2+ years of experience shipping
+              production-level features using React, TypeScript, and Node.js.
             </p>
+            <div className="flex gap-6">
+              <a
+                href="https://www.linkedin.com/in/rubencarmonamed/"
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+                target="_blank"
+                title="LinkedIn Profile"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={30} />
+              </a>
+              <a
+                href="https://github.com/Rcarmonam"
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                title="GitHub"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={30} />
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View my resume"
+                className="flex items-center gap-2 text-zinc-300 hover:text-white transition-colors"
+              >
+                <TbFileDownloadFilled size={30} />
+              </a>
+            </div>
           </div>
           {/* Right: image
           <div className="relative flex-shrink-0">
-  <div className="absolute inset-[-6px] rounded-full border border-zinc-700" />
-  <div className="absolute inset-[-12px] rounded-full border border-zinc-800" />
-  <Image
-    src="/landingimage.png"
-    alt="Intro pic"
-    width={200}
-    height={200}
-    className="rounded-full relative"
-  />
-</div> */}
+            <div className="absolute inset-[-6px] rounded-full border border-zinc-700" />
+            <div className="absolute inset-[-12px] rounded-full border border-zinc-800" />
+            <Image
+              src="/landingimage.png"
+              alt="Intro pic"
+              width={350}
+              height={350}
+              className="rounded-full relative"
+            />
+          </div> */}
           <div className="relative flex-shrink-0 p-3">
             <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-zinc-500" />
             <span className="absolute top-0 right-0 w-4 h-4 border-t border-r border-zinc-500" />

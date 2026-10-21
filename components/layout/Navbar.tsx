@@ -2,14 +2,14 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaLinkedin, FaCode } from 'react-icons/fa'
-import { TbFileDownloadFilled } from 'react-icons/tb'
+import { FaCode } from 'react-icons/fa'
+import { TbFileDownloadFilled, TbMail } from 'react-icons/tb'
 
 export default function Navbar() {
   const pathname = usePathname()
 
   const linkClass = (href: string) =>
-    `text-sm transition-colors text-zinc-50 hover:!text-zinc-400 ${
+    `text-sm transition-colors text-zinc-50 hover:text-zinc-400 ${
       pathname === href ? 'underline' : 'no-underline'
     }`
   return (
@@ -25,21 +25,21 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="/resume.pdf"
-            download
-            className="flex items-center text-sm transition-colors text-zinc-50 hover:text-zinc-400"
+            href="mailto:cm-ruben@hotmail.com"
+            className="flex items-center text-sm gap-1 transition-colors text-zinc-50 hover:text-zinc-400"
+          >
+            Email me
+            <TbMail size={25} />
+          </a>
+          <a
+            href="/Carmona_Ruben_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View my resume"
+            className="flex items-center text-sm gap-1 transition-colors text-zinc-50 hover:text-zinc-400"
           >
             Resume
             <TbFileDownloadFilled size={25} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rubencarmonamed/"
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={25} />
-            {/* <span>LinkedIn</span> */}
           </a>
         </div>
       </div>

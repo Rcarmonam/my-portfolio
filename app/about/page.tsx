@@ -22,39 +22,46 @@ const skills = [
 
 export default function AboutPage() {
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-28 pb-16">
-      <h1 className="text-2xl font-medium text-zinc-50">Ruben Carmona</h1>
-      <p className="text-zinc-500 text-sm mt-1">
-        Software Engineer · Edina, MN
-      </p>
+    <main className="max-w-2xl mx-auto px-6 pt-20 pb-12">
+      <div className="space-y-6">
+        <div className="space-y-1">
+          <h1 className="text-2xl font-medium text-zinc-50">Ruben Carmona</h1>
+          <p className="text-zinc-500 text-sm">Software Engineer</p>
+        </div>
 
-      <p className="text-zinc-400 leading-relaxed mt-6">
-        My journey into software engineering has been shaped by curiosity,
-        perseverance, and a desire to create meaningful experiences through
-        technology. As a first-generation college graduate, becoming a software
-        engineer was a goal that came with both challenges and opportunities
-        that helped shape the way I approach growth, learning, and
-        problem-solving today. Being bilingual has also allowed me to connect
-        with people from different backgrounds and perspectives, something I
-        truly value both personally and professionally. I enjoy building
-        applications that feel intuitive, thoughtful, and impactful while
-        continuing to push myself beyond my comfort zone as a developer. Outside
-        of work, I’m passionate about learning new technologies, building
-        personal projects, and growing not only as an engineer, but as a person.
-        I value authenticity, collaboration, and creating work that people can
-        genuinely connect with, and I’m excited to continue evolving through
-        every project and experience that comes my way.
-      </p>
+        <div className="max-w-prose space-y-4 text-zinc-400 leading-relaxed">
+          <p>
+            My journey into software engineering has been shaped by curiosity,
+            perseverance, and a desire to create meaningful experiences through
+            technology. As a first-generation college graduate, becoming a
+            software engineer was a goal that came with both challenges and
+            opportunities that helped shape the way I approach growth, learning,
+            and problem-solving today.
+          </p>
+          <p>
+            Being bilingual has also allowed me to connect with people from
+            different backgrounds and perspectives, something I truly value both
+            personally and professionally. I enjoy building applications that
+            feel intuitive, thoughtful, and impactful while continuously pushing
+            myself beyond my comfort zone as a developer.
+          </p>
+          <p>
+            I’m passionate about creating clean user experiences, solving
+            real-world problems, and building software that people can genuinely
+            connect with.
+          </p>
+        </div>
+      </div>
       <div className="border-t border-zinc-800 mt-10" />
       <section className="mt-8">
-        <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-600 mb-4">
+        <h2 className="text-sm font-medium uppercase tracking-widest text-zinc-50 mb-4">
           Skills
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {skills.map((skill) => (
             <span
               key={skill.label}
-              className="flex items-center gap-2 text-base px-4 py-2 text-zinc-400 transition-all duration-200 hover:text-zinc-50"
+              className="flex items-center gap-2 text-base px-4 py-2 text-zinc-400 transition-all duration-200 hover:text-zinc-50 border border-zinc-800 rounded-2xl bg-white/5 hover:bg-white/10"
             >
               <span className="text-xl">{skill.icon}</span>
               {skill.label}
