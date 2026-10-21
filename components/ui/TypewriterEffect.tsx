@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 
 export default function TypewriterEffect() {
   return (
-    <div className="flex items-center">
+    <div className="flex min-w-0 items-center">
       <motion.div
-        className="overflow-hidden whitespace-nowrap"
+        className="max-w-full overflow-hidden whitespace-nowrap"
         initial={{ width: '0%' }}
         animate={{ width: 'fit-content' }}
         transition={{
@@ -15,7 +15,7 @@ export default function TypewriterEffect() {
           delay: 0.5,
         }}
       >
-        <h1 className="text-3xl font-medium text-zinc-50">Hello World! 👋</h1>
+        <h1 className="text-2xl font-medium text-zinc-50 sm:text-3xl">Hello World! 👋</h1>
       </motion.div>
 
       <motion.span
@@ -26,7 +26,7 @@ export default function TypewriterEffect() {
           repeat: Infinity,
           repeatType: 'reverse',
         }}
-        className="inline-block w-[3px] h-8 bg-zinc-50 ml-1 rounded-sm"
+        className="ml-1 inline-block h-7 w-[3px] shrink-0 rounded-sm bg-zinc-50 sm:h-8"
       />
     </div>
   )
